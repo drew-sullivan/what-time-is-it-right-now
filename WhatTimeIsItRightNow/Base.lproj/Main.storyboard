@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oVi-8I-3O7">
+                                <rect key="frame" x="100" y="363" width="174" height="30"/>
+                                <state key="normal" title="What time is it right now?"/>
+                                <connections>
+                                    <action selector="wasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KdO-1o-3Lp"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygF-rg-2ZS">
+                                <rect key="frame" x="180.5" y="190" width="14" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHq-UP-k98" userLabel="Previous Time Label">
+                                <rect key="frame" x="180.5" y="453" width="14" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E8x-Ug-Kv8" userLabel="Num Clicks">
+                                <rect key="frame" x="166" y="522" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JHq-UP-k98" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6cs-LE-o3d"/>
+                            <constraint firstItem="oVi-8I-3O7" firstAttribute="top" secondItem="ygF-rg-2ZS" secondAttribute="bottom" constant="152" id="IyC-xK-ckd"/>
+                            <constraint firstItem="ygF-rg-2ZS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="170" id="JVv-vS-AWR"/>
+                            <constraint firstItem="JHq-UP-k98" firstAttribute="top" secondItem="oVi-8I-3O7" secondAttribute="bottom" constant="60" id="WKb-hN-hJO"/>
+                            <constraint firstItem="E8x-Ug-Kv8" firstAttribute="top" secondItem="JHq-UP-k98" secondAttribute="bottom" constant="48" id="fRY-pL-XVG"/>
+                            <constraint firstItem="ygF-rg-2ZS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ksk-Gw-Juf"/>
+                            <constraint firstItem="E8x-Ug-Kv8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sNz-ld-wqv"/>
+                            <constraint firstItem="oVi-8I-3O7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vGV-EB-IYd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="currentTimeLabel" destination="ygF-rg-2ZS" id="dqg-iW-1ig"/>
+                        <outlet property="numClicksLabel" destination="E8x-Ug-Kv8" id="rJr-bW-P53"/>
+                        <outlet property="previousTimeLabel" destination="JHq-UP-k98" id="ozZ-78-7P6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
