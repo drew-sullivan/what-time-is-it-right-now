@@ -15,6 +15,7 @@
 @property (strong, nonatomic) IBOutlet UILabel* currentTimeLabel;
 @property (strong, nonatomic) IBOutlet UILabel *previousTimeLabel;
 @property (strong, nonatomic) IBOutlet UILabel *numClicksLabel;
+@property (strong, nonatomic) IBOutlet UILabel *commentaryLabel;
 
 @end
 
@@ -25,6 +26,8 @@
     
     self.timeAdjuster = [[TimeAdjuster alloc] init];
     self.timeAdjuster.delegate = self;
+    
+    self.commentaryLabel.text = @"";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,6 +39,7 @@
     [self.timeAdjuster adjustCurrentTime:self.timeAdjuster];
     [self.timeAdjuster adjustPreviousTime:self.timeAdjuster];
     [self.timeAdjuster updateNumClicks:self.timeAdjuster];
+    [self.timeAdjuster updateCommentary:self.timeAdjuster];
 }
 
 - (void)timeAdjuster:(TimeAdjuster *)timeAdjuster updateCurrentWithTimeString:(NSString *)timeString {
@@ -54,6 +58,10 @@
 - (void)timeAdjuster:(TimeAdjuster *)timeAdjuster updateNumClicks:(int)newNumClicks {
     NSString *numClicksLabel = [[NSString alloc] initWithFormat:@"You've now clicked %i time(s)", newNumClicks];
     self.numClicksLabel.text = numClicksLabel;
+}
+
+- (void)timeAdjuster:(TimeAdjuster *)timeAdjuster updateCommentary:(NSString *)commentaryString {
+    self.commentaryLabel.text = commentaryString;
 }
 
 @end

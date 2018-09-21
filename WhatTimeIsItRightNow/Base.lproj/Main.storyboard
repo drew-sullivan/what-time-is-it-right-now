@@ -37,8 +37,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E8x-Ug-Kv8" userLabel="Num Clicks">
-                                <rect key="frame" x="166" y="522" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You've clicked 0 times" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E8x-Ug-Kv8" userLabel="Num Clicks">
+                                <rect key="frame" x="102.5" y="522" width="170" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wRM-DR-ZvT" userLabel="Commentary">
+                                <rect key="frame" x="180.5" y="591" width="14" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -49,15 +55,18 @@
                             <constraint firstItem="JHq-UP-k98" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6cs-LE-o3d"/>
                             <constraint firstItem="oVi-8I-3O7" firstAttribute="top" secondItem="ygF-rg-2ZS" secondAttribute="bottom" constant="152" id="IyC-xK-ckd"/>
                             <constraint firstItem="ygF-rg-2ZS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="170" id="JVv-vS-AWR"/>
+                            <constraint firstItem="wRM-DR-ZvT" firstAttribute="top" secondItem="E8x-Ug-Kv8" secondAttribute="bottom" constant="48" id="V2U-Dc-SpU"/>
                             <constraint firstItem="JHq-UP-k98" firstAttribute="top" secondItem="oVi-8I-3O7" secondAttribute="bottom" constant="60" id="WKb-hN-hJO"/>
                             <constraint firstItem="E8x-Ug-Kv8" firstAttribute="top" secondItem="JHq-UP-k98" secondAttribute="bottom" constant="48" id="fRY-pL-XVG"/>
                             <constraint firstItem="ygF-rg-2ZS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ksk-Gw-Juf"/>
+                            <constraint firstItem="wRM-DR-ZvT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sFn-Ho-sLg"/>
                             <constraint firstItem="E8x-Ug-Kv8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sNz-ld-wqv"/>
                             <constraint firstItem="oVi-8I-3O7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vGV-EB-IYd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="commentaryLabel" destination="wRM-DR-ZvT" id="Uhg-Kz-50N"/>
                         <outlet property="currentTimeLabel" destination="ygF-rg-2ZS" id="dqg-iW-1ig"/>
                         <outlet property="numClicksLabel" destination="E8x-Ug-Kv8" id="rJr-bW-P53"/>
                         <outlet property="previousTimeLabel" destination="JHq-UP-k98" id="ozZ-78-7P6"/>
@@ -65,6 +74,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="31.934032983508249"/>
         </scene>
     </scenes>
 </document>

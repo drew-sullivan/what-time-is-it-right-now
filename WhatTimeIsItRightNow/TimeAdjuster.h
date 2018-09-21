@@ -16,5 +16,6 @@
 - (void)adjustCurrentTime:(TimeAdjuster *)adjuster;
 - (void)adjustPreviousTime:(TimeAdjuster *)adjuster;
 - (void)updateNumClicks:(TimeAdjuster *)adjuster;
+- (void)updateCommentary:(TimeAdjuster *)adjuster;
 
 @end

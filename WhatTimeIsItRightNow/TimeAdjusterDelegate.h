@@ -13,5 +13,6 @@
 - (void)timeAdjuster:(TimeAdjuster *)timeAdjuster updateCurrentWithTimeString:(NSString *)timeString;
 - (void)timeAdjuster:(TimeAdjuster *)timeAdjuster updatePreviousWithTimeString:(NSString *)timeString;
 - (void)timeAdjuster:(TimeAdjuster *)timeAdjuster updateNumClicks:(int)newNumClicks;
+- (void)timeAdjuster:(TimeAdjuster *)timeAdjuster updateCommentary:(NSString *)commentaryString;
 
 @end
